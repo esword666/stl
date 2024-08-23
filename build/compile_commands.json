@@ -1,0 +1,56 @@
+[
+{
+  "directory": "L:/Code/stl/build",
+  "command": "C:/w64devkit/bin/cc.exe  @CMakeFiles/stl.dir/includes_C.rsp -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/stl.dir/src/container/vector.c.obj -c L:/Code/stl/src/container/vector.c",
+  "file": "L:/Code/stl/src/container/vector.c",
+  "output": "CMakeFiles/stl.dir/src/container/vector.c.obj"
+},
+{
+  "directory": "L:/Code/stl/build",
+  "command": "C:/w64devkit/bin/cc.exe  @CMakeFiles/stl.dir/includes_C.rsp -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/stl.dir/src/algorithm/rbtree/rbtree.c.obj -c L:/Code/stl/src/algorithm/rbtree/rbtree.c",
+  "file": "L:/Code/stl/src/algorithm/rbtree/rbtree.c",
+  "output": "CMakeFiles/stl.dir/src/algorithm/rbtree/rbtree.c.obj"
+},
+{
+  "directory": "L:/Code/stl/build",
+  "command": "C:/w64devkit/bin/cc.exe  @CMakeFiles/stl.dir/includes_C.rsp -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/stl.dir/src/container/map.c.obj -c L:/Code/stl/src/container/map.c",
+  "file": "L:/Code/stl/src/container/map.c",
+  "output": "CMakeFiles/stl.dir/src/container/map.c.obj"
+},
+{
+  "directory": "L:/Code/stl/build",
+  "command": "C:/w64devkit/bin/cc.exe  @CMakeFiles/stl.dir/includes_C.rsp -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/stl.dir/src/algorithm.c.obj -c L:/Code/stl/src/algorithm.c",
+  "file": "L:/Code/stl/src/algorithm.c",
+  "output": "CMakeFiles/stl.dir/src/algorithm.c.obj"
+},
+{
+  "directory": "L:/Code/stl/build",
+  "command": "C:/w64devkit/bin/cc.exe  @CMakeFiles/test_stl.dir/includes_C.rsp -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/test_stl.dir/test/test.c.obj -c L:/Code/stl/test/test.c",
+  "file": "L:/Code/stl/test/test.c",
+  "output": "CMakeFiles/test_stl.dir/test/test.c.obj"
+},
+{
+  "directory": "L:/Code/stl/build",
+  "command": "C:/w64devkit/bin/cc.exe  @CMakeFiles/test_stl.dir/includes_C.rsp -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/test_stl.dir/test/test_vector.c.obj -c L:/Code/stl/test/test_vector.c",
+  "file": "L:/Code/stl/test/test_vector.c",
+  "output": "CMakeFiles/test_stl.dir/test/test_vector.c.obj"
+},
+{
+  "directory": "L:/Code/stl/build",
+  "command": "C:/w64devkit/bin/cc.exe  @CMakeFiles/test_stl.dir/includes_C.rsp -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/test_stl.dir/test/test_map.c.obj -c L:/Code/stl/test/test_map.c",
+  "file": "L:/Code/stl/test/test_map.c",
+  "output": "CMakeFiles/test_stl.dir/test/test_map.c.obj"
+},
+{
+  "directory": "L:/Code/stl/build",
+  "command": "C:/w64devkit/bin/cc.exe  @CMakeFiles/test_stl.dir/includes_C.rsp -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/test_stl.dir/test/stu.c.obj -c L:/Code/stl/test/stu.c",
+  "file": "L:/Code/stl/test/stu.c",
+  "output": "CMakeFiles/test_stl.dir/test/stu.c.obj"
+},
+{
+  "directory": "L:/Code/stl/build",
+  "command": "C:/w64devkit/bin/cc.exe  @CMakeFiles/test_stl.dir/includes_C.rsp -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/test_stl.dir/test/test_stack.c.obj -c L:/Code/stl/test/test_stack.c",
+  "file": "L:/Code/stl/test/test_stack.c",
+  "output": "CMakeFiles/test_stl.dir/test/test_stack.c.obj"
+}
+]

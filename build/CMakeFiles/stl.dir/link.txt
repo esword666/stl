@@ -1,0 +1,2 @@
+C:/w64devkit/bin/ar.exe qc libstl.a CMakeFiles/stl.dir/src/container/vector.c.obj CMakeFiles/stl.dir/src/algorithm/rbtree/rbtree.c.obj CMakeFiles/stl.dir/src/container/map.c.obj CMakeFiles/stl.dir/src/algorithm.c.obj
+C:/w64devkit/bin/ranlib.exe libstl.a
