@@ -5,10 +5,10 @@ STUDENT stu_new(char* name, const int age) {
     return (STUDENT){name, age};
 }
 void print_stu(const STUDENT* pStu) {
-    if (pStu)printf("ÕâÊÇ%s£¬%dËê¡£\n", pStu->name, pStu->age);
+    if (pStu)printf("è¿™æ˜¯%sï¼Œ%då²ã€‚\n", pStu->name, pStu->age);
 }
 STUDENT* stus_set() {
-    STUDENT* stus = malloc(sizeof(STUDENT) * 5); // ·ÖÅäÄÚ´æ
+    STUDENT* stus = malloc(sizeof(STUDENT) * 5); // åˆ†é…å†…å­˜
     if (stus) {
         stus[0] = stu_new("Jason", 38);
         stus[1] = stu_new("Marry", 18);

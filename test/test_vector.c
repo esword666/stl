@@ -10,70 +10,70 @@ void add_stus(VECTOR* Vector, const STUDENT* stu) {
                 if (stu->age < ((STUDENT*)*it)->age) {
                     it = vector_insert(Vector, stu, it);
                     if (it) print_stu(*it);
-                    printf("ÄÚ²å--------------\n");
+                    printf("å†…æ’--------------\n");
                     return;
                 }
             }
         }
         vector_push(Vector, stu);
         print_stu(vector_back(Vector));
-        printf("Î²²åÈë---------------\n");
+        printf("å°¾æ’å…¥---------------\n");
     }
 }
 void pri_stus(const VECTOR* Vector) {
     if (Vector || vector_size(Vector) > 0) {
-        printf("-------¿ªÊ¼´òÓ¡Ñ§ÉúÁĞ±í-------\n");
+        printf("-------å¼€å§‹æ‰“å°å­¦ç”Ÿåˆ—è¡¨-------\n");
         for (const VECTOR_ITERATOR* it = vector_begin(Vector); it != vector_end(Vector); ++it) print_stu(*it);
-        printf("-------´òÓ¡Ñ§ÉúÁĞ±í½áÊø-------\n");
+        printf("-------æ‰“å°å­¦ç”Ÿåˆ—è¡¨ç»“æŸ-------\n");
     }
 }
 void test_vector() {
-    printf("Vector²âÊÔ³ÌĞò£¡\n");
+    printf("Vectoræµ‹è¯•ç¨‹åºï¼\n");
     printf("------------------------------------\n");
     VECTOR* Vector = vector_new(SIZE_MAX);
-    printf("VectorÖ¸ÕëÎ»ÖÃ£º%p\n", &Vector);
-    printf("Vector->dataÖ¸ÕëÎ»ÖÃ£º%p\n", Vector->data);
-    printf("µ±Ç°´óĞ¡£º%zu\n", vector_size(Vector));
+    printf("VectoræŒ‡é’ˆä½ç½®ï¼š%p\n", &Vector);
+    printf("Vector->dataæŒ‡é’ˆä½ç½®ï¼š%p\n", Vector->data);
+    printf("å½“å‰å¤§å°ï¼š%zu\n", vector_size(Vector));
 
     STUDENT* stu = stus_set();
 
-    printf("------¿ªÊ¼Îå´Î²åÈëÑ§Éú------------------\n");
+    printf("------å¼€å§‹äº”æ¬¡æ’å…¥å­¦ç”Ÿ------------------\n");
     for (int i = 0; i < 5; ++i) add_stus(Vector, &stu[i]);
-    printf("------½áÊøÎå´Î²åÈëÑ§Éú------------------\n");
+    printf("------ç»“æŸäº”æ¬¡æ’å…¥å­¦ç”Ÿ------------------\n");
     print_stu(vector_front(Vector));
     printf("------------------------------------\n");
-    printf("ÕâÊÇVectorµØÖ·£º%p\n", Vector);
-    printf("ÕâÊÇÏÂ±ê0Î»ÖÃÊı¾İµØÖ·%p\n", vector_at(Vector, 0));
-    printf("VectorÊı¾İÖ¸ÕëÎ»ÖÃ£º%p£¬Êı¾İÃû×ÖÖ¸ÕëÎ»ÖÃ£º%p¡£\n", vector_at(Vector, 0), ((STUDENT*)vector_at(Vector, 0))->name);
-    printf("VectorÊı¾İÖ¸ÕëÎ»ÖÃ£º%p£¬Êı¾İÃû×Ö£º%s¡£\n", vector_at(Vector, 0), ((STUDENT*)vector_at(Vector, 0))->name);
-    if (!vector_empty(Vector)) printf("VectorÊı¾İÖ¸ÕëÎ»ÖÃ£º%p\n", vector_at(Vector, 0));
-    printf("µ±Ç°´óĞ¡£º%zu\n", vector_size(Vector));
+    printf("è¿™æ˜¯Vectoråœ°å€ï¼š%p\n", Vector);
+    printf("è¿™æ˜¯ä¸‹æ ‡0ä½ç½®æ•°æ®åœ°å€%p\n", vector_at(Vector, 0));
+    printf("Vectoræ•°æ®æŒ‡é’ˆä½ç½®ï¼š%pï¼Œæ•°æ®åå­—æŒ‡é’ˆä½ç½®ï¼š%pã€‚\n", vector_at(Vector, 0), ((STUDENT*)vector_at(Vector, 0))->name);
+    printf("Vectoræ•°æ®æŒ‡é’ˆä½ç½®ï¼š%pï¼Œæ•°æ®åå­—ï¼š%sã€‚\n", vector_at(Vector, 0), ((STUDENT*)vector_at(Vector, 0))->name);
+    if (!vector_empty(Vector)) printf("Vectoræ•°æ®æŒ‡é’ˆä½ç½®ï¼š%p\n", vector_at(Vector, 0));
+    printf("å½“å‰å¤§å°ï¼š%zu\n", vector_size(Vector));
     printf("------------------------------------\n");
     pri_stus(Vector);
     printf("------------------------------------\n");
-    printf("µ±Ç°´óĞ¡£º%zu\n", vector_size(Vector));
+    printf("å½“å‰å¤§å°ï¼š%zu\n", vector_size(Vector));
     VECTOR_ITERATOR* v_it = vector_begin(Vector);
     ++v_it;
     v_it = vector_erase(Vector, v_it);
     printf("------------------------------------\n");
     if (v_it) {
-        printf("²Á³ıÒ»¸öÑ§Éú³É¹¦\n");
+        printf("æ“¦é™¤ä¸€ä¸ªå­¦ç”ŸæˆåŠŸ\n");
         print_stu(*v_it);
-    } else printf("²Á³ıÒ»¸öÑ§ÉúÊ§°Ü\n");
+    } else printf("æ“¦é™¤ä¸€ä¸ªå­¦ç”Ÿå¤±è´¥\n");
     printf("------------------------------------\n");
-    printf("²éÕÒ%sÎ»ÖÃÔÚ%zu\n", stu[2].name, vector_find(Vector, &stu[2]));
+    printf("æŸ¥æ‰¾%sä½ç½®åœ¨%zu\n", stu[2].name, vector_find(Vector, &stu[2]));
     printf("------------------------------------\n");
     vector_clear(Vector);
-    printf("VectorÒÑÇåÀí£¡\n");
-    printf("µ±Ç°´óĞ¡£º%zu\n", vector_size(Vector));
+    printf("Vectorå·²æ¸…ç†ï¼\n");
+    printf("å½“å‰å¤§å°ï¼š%zu\n", vector_size(Vector));
     v_it = vector_begin(Vector);
     vector_insert(Vector, &stu[0], v_it);
     printf("------------------------------------\n");
     pri_stus(Vector);
     printf("------------------------------------\n");
-    if (vector_empty(Vector)) printf("Îª¿Õ\n");
-    else printf("²»Îª¿Õ\n");
-    printf("VectorÊı¾İÖ¸ÕëÎ»ÖÃ£º%p\n", vector_at(Vector, 0));
+    if (vector_empty(Vector)) printf("ä¸ºç©º\n");
+    else printf("ä¸ä¸ºç©º\n");
+    printf("Vectoræ•°æ®æŒ‡é’ˆä½ç½®ï¼š%p\n", vector_at(Vector, 0));
     printf("------------------------------------\n");
     vector_del(Vector);
     stus_del(stu);

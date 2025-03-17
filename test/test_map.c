@@ -19,7 +19,7 @@ static void pri_stus(const MAP_R* map_r) {
     printf("------------------\n");
 }
 void test_map() {
-    printf("map≤‚ ‘≥Ã–Ú\n");
+    printf("mapÊµãËØïÁ®ãÂ∫è\n");
     printf("------------------------------------\n");
     const STUDENT* stu   = stus_set();
     MAP_R    map_r = map_new(sizeof(char)*20, sizeof(STUDENT));
@@ -27,9 +27,9 @@ void test_map() {
     for (int i = 0; i < 5; i++) add_stus(&map_r, &stu[i]);
     printf("------------------------------------\n");
     pri_stus(&map_r);
-    printf("map ◊ ˝æ› «%s:%dÀÍ\n", (map_val(map_begin(&map_r), STUDENT))->name, (map_val(map_begin(&map_r), STUDENT))->age);
+    printf("mapÈ¶ñÊï∞ÊçÆÊòØ%s:%dÂ≤Å\n", (map_val(map_begin(&map_r), STUDENT))->name, (map_val(map_begin(&map_r), STUDENT))->age);
     print_stu(map_val(map_find(&map_r, "Tomy", cmp_char), STUDENT));
     const char* erase = "Tom";
-    printf("…æ≥˝—ß…˙%s∫Û£¨∑µªÿ£∫%dÀÍ\n", erase, (map_val(map_erase(&map_r, map_find(&map_r, erase, cmp_char)), STUDENT))->age);
+    printf("Âà†Èô§Â≠¶Áîü%sÂêéÔºåËøîÂõûÔºö%dÂ≤Å\n", erase, (map_val(map_erase(&map_r, map_find(&map_r, erase, cmp_char)), STUDENT))->age);
     pri_stus(&map_r);
 }

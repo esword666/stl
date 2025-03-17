@@ -8,47 +8,47 @@ static void add_stus(STACK* stack, const STUDENT* stu) {
         printf("------------------\n");
         stack_push(stack, stu);
         print_stu(stack_top(stack));
-        printf("Î²²åÈë---------------\n");
+        printf("å°¾æ’å…¥---------------\n");
     }
 }
 static void pri_stus(const STACK* stack) {
-    printf("-------¿ªÊ¼´òÓ¡Ñ§ÉúÁĞ±í-------\n");
+    printf("-------å¼€å§‹æ‰“å°å­¦ç”Ÿåˆ—è¡¨-------\n");
     print_stu(stack_top(stack));
-    printf("-------´òÓ¡Ñ§ÉúÁĞ±í½áÊø-------\n");
+    printf("-------æ‰“å°å­¦ç”Ÿåˆ—è¡¨ç»“æŸ-------\n");
 }
 void test_stack() {
-    printf("Stack²âÊÔ³ÌĞò£¡\n");
+    printf("Stackæµ‹è¯•ç¨‹åºï¼\n");
     printf("------------------------------------\n");
     STACK* stack = stack_new(sizeof(STUDENT));
-    printf("stackÖ¸ÕëÎ»ÖÃ£º%p\n", &stack);
-    printf("stack->dataÖ¸ÕëÎ»ÖÃ£º%p\n", stack->data);
-    printf("µ±Ç°´óĞ¡£º%zu\n", stack_size(stack));
+    printf("stackæŒ‡é’ˆä½ç½®ï¼š%p\n", &stack);
+    printf("stack->dataæŒ‡é’ˆä½ç½®ï¼š%p\n", stack->data);
+    printf("å½“å‰å¤§å°ï¼š%zu\n", stack_size(stack));
     STUDENT* stu = stus_set();
-    printf("------¿ªÊ¼Îå´Î²åÈëÑ§Éú------------------\n");
+    printf("------å¼€å§‹äº”æ¬¡æ’å…¥å­¦ç”Ÿ------------------\n");
     for (int i = 0; i < 5; ++i) add_stus(stack, &stu[i]);
-    printf("------½áÊøÎå´Î²åÈëÑ§Éú------------------\n");
+    printf("------ç»“æŸäº”æ¬¡æ’å…¥å­¦ç”Ÿ------------------\n");
     pri_stus(stack);
-    printf("µ±Ç°´óĞ¡£º%zu\n", stack_size(stack));
+    printf("å½“å‰å¤§å°ï¼š%zu\n", stack_size(stack));
     stack_pop(stack);
-    printf("µ±Ç°´óĞ¡£º%zu\n", stack_size(stack));
+    printf("å½“å‰å¤§å°ï¼š%zu\n", stack_size(stack));
     pri_stus(stack);
     VECTOR* vector = vector_new(sizeof(STUDENT));
     stack_copy_vector(stack, vector);
-    printf("µ±Ç°´óĞ¡£º%zu\n", vector_size(vector));
+    printf("å½“å‰å¤§å°ï¼š%zu\n", vector_size(vector));
     if (vector || vector_size(vector) > 0) {
-        printf("-------¿ªÊ¼´òÓ¡Ñ§ÉúÁĞ±í-------\n");
+        printf("-------å¼€å§‹æ‰“å°å­¦ç”Ÿåˆ—è¡¨-------\n");
         for (const VECTOR_ITERATOR* it = vector_begin(vector); it != vector_end(vector); ++it) {
             print_stu(*it);
         }
-        printf("-------´òÓ¡Ñ§ÉúÁĞ±í½áÊø-------\n");
+        printf("-------æ‰“å°å­¦ç”Ÿåˆ—è¡¨ç»“æŸ-------\n");
     }
     swap(stack, vector);
     if (vector || vector_size(vector) > 0) {
-        printf("-------¿ªÊ¼´òÓ¡Ñ§ÉúÁĞ±í-------\n");
+        printf("-------å¼€å§‹æ‰“å°å­¦ç”Ÿåˆ—è¡¨-------\n");
         for (const VECTOR_ITERATOR* it = vector_begin(vector); it != vector_end(vector); ++it) {
             print_stu(*it);
         }
-        printf("-------´òÓ¡Ñ§ÉúÁĞ±í½áÊø-------\n");
+        printf("-------æ‰“å°å­¦ç”Ÿåˆ—è¡¨ç»“æŸ-------\n");
     }
     vector_del(vector);
     stack_del(stack);

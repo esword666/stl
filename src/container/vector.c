@@ -19,13 +19,13 @@ static int expand(VECTOR* vector) {
         if (new_data != NULL) {
             vector->data = new_data;
             vector->capacity = capacity;
-            DEBUG_PRINT("À©Èİ1.5±¶\n");
+            DEBUG_PRINT("æ‰©å®¹1.5å€\n");
             return 1;
         }
-        DEBUG_PRINT("À©ÈİÊ§°Ü\n");
+        DEBUG_PRINT("æ‰©å®¹å¤±è´¥\n");
         return -1;
     }
-    DEBUG_PRINT("µ±Ç°Î´Âú\n");
+    DEBUG_PRINT("å½“å‰æœªæ»¡\n");
     return 0;
 }
 void vector_clear(VECTOR* vector) {
@@ -42,27 +42,27 @@ size_t vector_find(const VECTOR* vector, const void* data) {
     if (data != NULL && vector_valid(vector)) {
         for (size_t i = 0; i < vector->size; ++i) {
             if (vector->data[i] == data) {
-                DEBUG_PRINT("ÔÚÎ»ÖÃ%zu²éÕÒ³É¹¦\n", i);
+                DEBUG_PRINT("åœ¨ä½ç½®%zuæŸ¥æ‰¾æˆåŠŸ\n", i);
                 return i;
             }
         }
-        DEBUG_PRINT("ÎŞÆ¥ÅäÊı¾İ£¬²éÕÒÊ§°Ü\n");
+        DEBUG_PRINT("æ— åŒ¹é…æ•°æ®ï¼ŒæŸ¥æ‰¾å¤±è´¥\n");
         return SIZE_MAX;
     }
-    DEBUG_PRINT("²éÕÒÊı¾İÎŞĞ§»òVectorÎŞĞ§£¬²éÕÒÊ§°Ü\n");
+    DEBUG_PRINT("æŸ¥æ‰¾æ•°æ®æ— æ•ˆæˆ–Vectoræ— æ•ˆï¼ŒæŸ¥æ‰¾å¤±è´¥\n");
     return SIZE_MAX;
 }
 void vector_pop(VECTOR* vector) {
     if (!vector_empty(vector)) {
         void* pop_p = vector->data[--vector->size];
         erase_data(pop_p, vector->type);
-        DEBUG_PRINT("Î²ÒÆ³ö³É¹¦\n");
+        DEBUG_PRINT("å°¾ç§»å‡ºæˆåŠŸ\n");
     }
 }
 void vector_push(VECTOR* vector, const void* data) {
     if (data != NULL && vector_valid(vector) && expand(vector) != -1) {
         vector->data[vector->size++] = insert_data(data, vector->type);
-        DEBUG_PRINT("Î²²åÈë³É¹¦\n");
+        DEBUG_PRINT("å°¾æ’å…¥æˆåŠŸ\n");
     }
 }
 bool vector_resize(VECTOR* vector, const size_t capacity) {
@@ -71,11 +71,11 @@ bool vector_resize(VECTOR* vector, const size_t capacity) {
         if (new_data != NULL) {
             vector->data = new_data;
             vector->capacity = capacity;
-            DEBUG_PRINT("µ÷ÕûÈİÁ¿Îª£º%zu\n", capacity);
+            DEBUG_PRINT("è°ƒæ•´å®¹é‡ä¸ºï¼š%zu\n", capacity);
             return true;
         }
     }
-    DEBUG_PRINT("µ÷ÕûÈİÁ¿Ê§°Ü\n");
+    DEBUG_PRINT("è°ƒæ•´å®¹é‡å¤±è´¥\n");
     return false;
 }
 VECTOR* vector_new(const size_t type) {
@@ -83,13 +83,13 @@ VECTOR* vector_new(const size_t type) {
     if (vector != NULL) {
         void** data = malloc(sizeof(void *) * DEF_CAPACITY);
         if (data != NULL) {
-            DEBUG_PRINT("data·ÖÅäµ½Î»ÖÃÎª%pµÄÄÚ´æ\n", data);
+            DEBUG_PRINT("dataåˆ†é…åˆ°ä½ç½®ä¸º%pçš„å†…å­˜\n", data);
             vector->data = data;
             vector->size = 0;
             vector->capacity = DEF_CAPACITY;
             vector->type = type;
         } else {
-            fprintf(stderr, "ÄÚ´æ·ÖÅäÊ§°Ü\n");
+            fprintf(stderr, "å†…å­˜åˆ†é…å¤±è´¥\n");
             free(vector);
             vector = NULL;
         }
@@ -109,7 +109,7 @@ VECTOR_ITERATOR* vector_insert(VECTOR* vector, const void* data, VECTOR_ITERATOR
         const size_t elements_to_move = vector->size - index;
         if (is_full(vector)) {
             if (expand(vector) == -1) {
-                DEBUG_PRINT("ÎŞ·¨À©Èİ£¬²åÈëÊ§°Ü\n");
+                DEBUG_PRINT("æ— æ³•æ‰©å®¹ï¼Œæ’å…¥å¤±è´¥\n");
                 return NULL;
             }
             it = vector->data + index;
@@ -118,10 +118,10 @@ VECTOR_ITERATOR* vector_insert(VECTOR* vector, const void* data, VECTOR_ITERATOR
             memmove(it + 1, it, sizeof(void *) * elements_to_move);
         }
         vector->data[index] = insert_data(data, vector->type);
-        DEBUG_PRINT("ÔÚÎ»ÖÃ%zu²åÈë³É¹¦\n", index);
+        DEBUG_PRINT("åœ¨ä½ç½®%zuæ’å…¥æˆåŠŸ\n", index);
         return it;
     }
-    DEBUG_PRINT("Êı¾İÎŞĞ§»òVectorÎŞĞ§¡¢µü´úÆ÷Ô½½ç£¬²åÈëÊ§°Ü\n");
+    DEBUG_PRINT("æ•°æ®æ— æ•ˆæˆ–Vectoræ— æ•ˆã€è¿­ä»£å™¨è¶Šç•Œï¼Œæ’å…¥å¤±è´¥\n");
     return NULL;
 }
 VECTOR_ITERATOR* vector_erase(VECTOR* vector, VECTOR_ITERATOR* it) {
@@ -131,9 +131,9 @@ VECTOR_ITERATOR* vector_erase(VECTOR* vector, VECTOR_ITERATOR* it) {
         if (index < --vector->size) {
             memmove(it, it + 1, sizeof(void *) * (vector->size - index));
         }
-        DEBUG_PRINT("ÔÚÎ»ÖÃ%zu²Á³ı³É¹¦\n", index);
+        DEBUG_PRINT("åœ¨ä½ç½®%zuæ“¦é™¤æˆåŠŸ\n", index);
         return it;
     }
-    DEBUG_PRINT("VectorÎŞĞ§»òµü´úÆ÷Ô½½ç£¬²Á³ıÊ§°Ü\n");
+    DEBUG_PRINT("Vectoræ— æ•ˆæˆ–è¿­ä»£å™¨è¶Šç•Œï¼Œæ“¦é™¤å¤±è´¥\n");
     return NULL;
 }

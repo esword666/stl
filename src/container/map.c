@@ -54,7 +54,7 @@ MAP_N* map_erase(MAP_R* root, MAP_N* node) {
     if (root == NULL || node == NULL) return NULL;
     rb_erase_cached((RB_NODE *)node, (RB_ROOT_CACHED_ *)root);
     --root->size;
-    DEBUG_PRINT("ɾ����ǰ�ڵ��ַ��%p����ǰMAP��СΪ��%zu\n", node, map_size(root));
+    DEBUG_PRINT("删除当前节点地址：%p，当前MAP大小为：%zu\n", node, map_size(root));
     return map_node_del(node);
 }
 MAP_N* map_insert(MAP_R* root, const void* key, const void* val, bool (*less)(RB_NODE*, const RB_NODE*)) {
@@ -62,6 +62,6 @@ MAP_N* map_insert(MAP_R* root, const void* key, const void* val, bool (*less)(RB
     MAP_N* node = map_node_new(key, root->key_type, val, root->val_type);
     rb_add_cached((RB_NODE *)node, (RB_ROOT_CACHED_ *)root, less);
     ++root->size;
-    DEBUG_PRINT("������ɣ���ǰMAP��СΪ��%zu\n��ǰ�ڵ��ַ��%p\n", map_size(root), node);
+    DEBUG_PRINT("插入完成，当前MAP大小为：%zu\n当前节点地址：%p\n", map_size(root), node);
     return node;
 }
