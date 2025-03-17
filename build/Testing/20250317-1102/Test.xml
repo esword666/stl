@@ -2,7 +2,7 @@
 <Site BuildName="(empty)"
 	BuildStamp="20250317-1102-Experimental"
 	Name="(empty)"
-	Generator="ctest-3.30.0"
+	Generator="ctest-4.0.0-rc4"
 	CompilerName=""
 	CompilerVersion=""
 	OSName="Windows"
@@ -15,20 +15,21 @@
 	VendorID="Intel Corporation"
 	FamilyID="6"
 	ModelID="14"
+	ModelName=""
 	ProcessorCacheSize="-1"
 	NumberOfLogicalCPU="12"
 	NumberOfPhysicalCPU="6"
 	TotalVirtualMemory="32633"
 	TotalPhysicalMemory="32633"
 	LogicalProcessorsPerPhysical="2"
-	ProcessorClockFrequency="3696"
+	ProcessorClockFrequency="3695"
 	>
 	<Testing>
-		<StartDateTime>Mar 17 19:23 中国标准时间</StartDateTime>
-		<StartTestTime>1742210623</StartTestTime>
+		<StartDateTime>Mar 17 19:45 中国标准时间</StartDateTime>
+		<StartTestTime>1742211955</StartTestTime>
 		<TestList/>
-		<EndDateTime>Mar 17 19:23 中国标准时间</EndDateTime>
-		<EndTestTime>1742210623</EndTestTime>
+		<EndDateTime>Mar 17 19:45 中国标准时间</EndDateTime>
+		<EndTestTime>1742211955</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>
