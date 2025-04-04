@@ -1,9 +1,11 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "libstl.a"
+			"path" : "test_stl.exe"
+		},
+		{
+			"path" : "test_stl.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -11,8 +13,8 @@
 	{
 		"commands" : 
 		[
-			"add_library",
-			"target_include_directories"
+			"add_executable",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -26,13 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 4,
+				"line" : 22,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 10,
+				"line" : 29,
 				"parent" : 0
 			}
 		]
@@ -43,7 +45,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O3 -DNDEBUG -std=gnu11"
+					"fragment" : " -Wall -Wextra -O2 -O3 -DNDEBUG -std=c11"
 				}
 			],
 			"includes" : 
@@ -67,13 +69,41 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
-	"id" : "stl::@6890427a1f51a3e7e1df",
-	"name" : "stl",
-	"nameOnDisk" : "libstl.a",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "stl::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "test_stl::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-Wall -Wextra -O2 -O3 -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "libstl.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "test_stl",
+	"nameOnDisk" : "test_stl.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -88,7 +118,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -97,27 +128,33 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/container/vector.c",
+			"path" : "test/test.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/algorithm/rbtree/rbtree.c",
+			"path" : "test/test_vector.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/container/map.c",
+			"path" : "test/test_map.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/algorithm.c",
+			"path" : "test/stu.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "test/test_stack.c",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "EXECUTABLE"
 }

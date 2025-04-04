@@ -1,0 +1,5 @@
+{
+    "cmake.additionalCompilerSearchDirs": [
+        "C:\\w64devkit\\bin"
+    ]
+}

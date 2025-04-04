@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="(empty)"
-	BuildStamp="20250317-1102-Experimental"
+	BuildStamp="20250404-1148-Experimental"
 	Name="(empty)"
-	Generator="ctest-4.0.0-rc4"
+	Generator="ctest-4.0.0"
 	CompilerName=""
 	CompilerVersion=""
 	OSName="Windows"
 	Hostname="Monster"
 	OSRelease=" Professional"
-	OSVersion=" (Build 27808)"
+	OSVersion=" (Build 27823)"
 	OSPlatform="AMD64"
 	Is64Bits="1"
 	VendorString="GenuineIntel"
@@ -22,14 +22,14 @@
 	TotalVirtualMemory="32633"
 	TotalPhysicalMemory="32633"
 	LogicalProcessorsPerPhysical="2"
-	ProcessorClockFrequency="3695"
+	ProcessorClockFrequency="3696"
 	>
 	<Testing>
-		<StartDateTime>Mar 17 19:45 中国标准时间</StartDateTime>
-		<StartTestTime>1742211955</StartTestTime>
+		<StartDateTime>Apr 04 19:58 [NON-UTF-8-BYTE-0xD6]й[NON-UTF-8-BYTE-0xFA][NON-UTF-8-BYTE-0xB1][NON-UTF-8-BYTE-0xEA]׼ʱ[NON-UTF-8-BYTE-0xBC][NON-UTF-8-BYTE-0xE4]</StartDateTime>
+		<StartTestTime>1743767922</StartTestTime>
 		<TestList/>
-		<EndDateTime>Mar 17 19:45 中国标准时间</EndDateTime>
-		<EndTestTime>1742211955</EndTestTime>
+		<EndDateTime>Apr 04 19:58 [NON-UTF-8-BYTE-0xD6]й[NON-UTF-8-BYTE-0xFA][NON-UTF-8-BYTE-0xB1][NON-UTF-8-BYTE-0xEA]׼ʱ[NON-UTF-8-BYTE-0xBC][NON-UTF-8-BYTE-0xE4]</EndDateTime>
+		<EndTestTime>1743767922</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

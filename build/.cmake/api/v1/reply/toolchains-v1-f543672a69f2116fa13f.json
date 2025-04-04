@@ -39,7 +39,7 @@
 						"kernel32"
 					]
 				},
-				"path" : "C:/w64devkit/bin/cc.exe",
+				"path" : "C:/w64devkit/bin/gcc.exe",
 				"version" : "14.2.0"
 			},
 			"language" : "C",
